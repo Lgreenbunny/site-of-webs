@@ -1,0 +1,6 @@
+p {
+    font-size: 300%;
+    border: 2px double;
+    /* https://www.w3schools.com/cssref/pr_class_display.asp*/
+    display: inline;
+}
