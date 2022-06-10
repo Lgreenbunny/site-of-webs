@@ -8,23 +8,34 @@
         <h1>Welcome to the code showcas e</h1>
         <!-- https://www.w3schools.com/tags/tag_a.asp open in the same page -->
         
-        <p>Google Sheets content: <a id="sheets" href="https://www.google.com" target="_self">just google for now.</a>
-            <br>React js content: <a id="react" href="https://lgreenbunny.github.io/site-of-webs/reactCodes.html" target="_self">a page</a>
-            <br>Three js content: <a id="three" href="https://lgreenbunny.github.io/site-of-webs/threeCodes.html" target="_self">a page again</a></p>
+        <div>
+            <p>Google Sheets content: 
+                <a id="sheets" href="https://www.google.com" target="_self">just google for now.</a>
+            </p>
+        </div>
+        <div>
+            <p>React js content: 
+                <a id="react" href="https://lgreenbunny.github.io/site-of-webs/reactCodes.html" target="_self">a page</a>
+            </p>
+        </div>
+        <div>
+            <p>Three js content: 
+                <a id="three" href="https://lgreenbunny.github.io/site-of-webs/threeCodes.html" target="_self">a page again</a>
+            </p>
+        </div>
            <!-- 
             <br>React js content: <a href="http://127.0.0.1:5500/reactCodes.html" target="_self">a page</a>
         live server loopback ip for testing vs github page link
             it needs to keep the .html ending for now-->
             
         <script>
-            var test = false;
-            var reactCon = document.getElementById('react');
-            var threeCon = document.getElementById('three');
+            var test = true;
             
             if(test){
                 document.getElementById('react').setAttribute("href", "http://127.0.0.1:5500/reactCodes.html");
                 document.getElementById('three').setAttribute("href", "http://127.0.0.1:5500/threeCodes.html");
             }
+
         </script>
     </body>
 </html>
