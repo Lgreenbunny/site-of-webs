@@ -2,13 +2,28 @@
 <html lang="en">
     <head> <!--css can be put in a css sheet then 
     <link rel = stylesheet href = style.css-->
-    <!--https://www.w3schools.com/cssref/-->
-        <title>Another title, how?</title>
+    <!--https://www.w3schools.com/cssref/-->    
+    
+    <title>Another title, how</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p>Nothing here, feel free to enjoy the box, though.</p>
         <!-- maybe add a table here for multiple game/examples that launch/load 
         on a click of a button -->
+        <div id="upper_controls">
+            <p>Nothing here, feel free to enjoy the box, though.</p>
+        </div>
+        <div id="fish_area">
+            <pText id="test">Here</pText>
+        </div>
+
+        <!--these 2 lines are from https://reactjs.org/docs/add-react-to-a-website.html
+        replace "development.js" with "production.min.js" during deployment-->
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        
+        <!-- Load React code, but can this go in <head>? -->
+        <script src="fish.js"></script>
+
     </body>
 </html>
