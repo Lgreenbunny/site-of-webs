@@ -26,21 +26,9 @@
                 </table>
             </details>
         </div>
-        <div>
-            <p>React js content: 
-                <a id="react" href="https://lgreenbunny.github.io/site-of-webs/reactCodes.html" target="_self">
-                    a page.</a>
-            </p>
-        </div>
-        <div>
-            <p>Three js content: 
-                <a id="three" href="https://lgreenbunny.github.io/site-of-webs/threeCodes.html" target="_self">
-                    a page again.</a>
-            </p>
-        </div>
-        <p>My Github: 
-            <a href="https://github.com/Lgreenbunny">a legitimate page. Maybe.                                                                                                      </a>
-        </p>
+        <div id="react"></div>
+        <div id="three"></div>
+        <div id="git"></div>
        <!-- 
             <br>React js content: <a href="http://127.0.0.1:5500/reactCodes.html" target="_self">a page</a>
         live server loopback ip for testing vs github page link
@@ -48,12 +36,37 @@
             
         <script>
             var test = false;
-            
-            if(test){
-                document.getElementById('react').setAttribute("href", "http://127.0.0.1:5500/reactCodes.html");
-                document.getElementById('three').setAttribute("href", "http://127.0.0.1:5500/threeCodes.html");
-            }
 
+
+            var regularLink = "https://lgreenbunny.github.io/site-of-webs/"; //regular link prefix
+            var testLink = "http://127.0.0.1:5500/"; //liveserver testing prefix with loopback ip
+            /*if the link doesnt's start with https, the loop'll add one of the prefix links based on the test var.
+            the order of the array is: [div id, link text, [end of/full] link*/
+            var linkArr = 
+            ["react", "React js content", "reactCodes.html",
+            "three", "Three js content", "threeCodes.html",
+            "git", "My Github", "https://github.com/Lgreenbunny"
+            ];
+            //using three indexes at once, it makes a paragraph element with a link inside for each div
+            for(var i = 0; i < linkArr.length; i+=3){
+                var link = "";
+                if(linkArr[i+2].match("https.*"))
+                    link += linkArr[i+2]
+                else
+                    link += test ? testLink+linkArr[i+2] : regularLink+linkArr[i+2];
+                var linkTag = document.createElement("a");
+                linkTag.setAttribute("href", link);
+                var paraTag = document.createElement("p");
+                paraTag.appendChild(linkTag);
+                document.getElementById(linkArr[i]).appendChild(paraTag);
+                /*document.getElementById(linkArr[i]).appendChild(
+                    document.createElement("p").appendChild(
+                        document.createElement("a").setAttribute("href", link)
+                    )
+                );*/
+                linkTag.innerText = linkArr[i+1];
+            }
+            
         </script>
     </body>
 </html>
