@@ -1,5 +1,7 @@
 //globals
+//instead of a testing mode, bookmarks can be made for the live-server versions of the pages
 var test = true;
+
 
 //regular link prefix
 var regularLink = "https://lgreenbunny.github.io/site-of-webs/"; 
