@@ -8,6 +8,16 @@
 
 /* adding content before each: https://stackoverflow.com/questions/20604556/adding-bullets-to-header-tag-in-orchard
 this example uses a unicode-code*/
+details{
+    min-width: 500px;
+    max-width: 33%
+}
+/* effecs <summary> inside a details tag*/
+details > summary{
+    border-bottom-style: dashed;
+}
+
+
 h2::before {
     content: '\272A';
     margin-right: 15px
@@ -17,10 +27,12 @@ h3::before{
     margin-right: 15px
 }
 
-details{
-    min-width: 500px;
-    max-width: 33%
+td{
+    border-left: 1px solid;
+    border-bottom: 1px dotted;
+    padding-left: 12px;
+    padding-right: 12px;
 }
-summary{
-    border-bottom-style: dashed;
+th{
+    min-width: 100px;
 }
