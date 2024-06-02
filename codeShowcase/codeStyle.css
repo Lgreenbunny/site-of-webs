@@ -13,19 +13,23 @@ you can't set any other border properties without setting the "border-style" fir
 details{
     /*border-style: none none solid none;
     border-width: 5px;*/
-    min-width: 500px;
-    max-width: 45%
+    min-width: 300px;
+    max-width: 70%
 }
 details > details{
     border-style: none dashed solid none;
     border-width: 1px;
-    min-width: 500px;
-    max-width: 45%
+    max-width: 100%
 }
 /* effecs <summary> inside a details tag*/
-details > summary{
+/*details > summary*/
+.mainDetail{
     border-bottom-style: solid;
-    border-width: 2px
+    border-width: 2px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: xx-large;
+    border-top-right-radius: 20px;
 } 
 
 details > details > summary{
@@ -33,6 +37,8 @@ details > details > summary{
     border-bottom-style: solid;
     border-width: 2px;
     padding-top: 7px;
+    background-color: lavender;
+    font-weight: bold;
 } 
 a{
     border-style: none none double none;

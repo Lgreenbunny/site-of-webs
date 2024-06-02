@@ -8,26 +8,34 @@
     </head>
 
     <body>
+        <h3><a href="..">Back to homepage</a></h3>
         <h2><a href="https://github.com/Lgreenbunny">Github page</a></h2>
         
         <h2>Google Sheets related</h2>
         <div id="googleCalc">
-            <details id = "life"><summary>Life</summary>
-                <p>• Has a shoping list section that auto-totals the cost, plus a sheet that can compare the worth of different foods or products    
-                    <br><a href="https://docs.google.com/spreadsheets/d/187hxOUSnHi7JgrJTMVjgsfTxK310gsSNnfyJBFEK6ng/edit?usp=sharing">Public shopping list + product comparer</a>
-                </p>
-                <p>• Food log/calorie calculator (in progress)</p>
+            <details open id = "life"><summary class="mainDetail">Life</summary>
+                <details id = "shopping"><summary>Shopping list / price comparing</summary>
+                    <p>• Has a shoping list section that auto-totals the cost, plus a sheet that can compare the worth of different foods or products    
+                        <br><a href="https://docs.google.com/spreadsheets/d/187hxOUSnHi7JgrJTMVjgsfTxK310gsSNnfyJBFEK6ng/edit?usp=sharing">Public shopping list + product comparer</a>
+                    </p>
+                </details>
+                <details id = "food"><summary>Food nutrition calculator</summary>
+                    <p>• Food log/calorie calculator (in progress)</p>
+                </details>
             </details>
 
             
-            <!-- possibly add a <br> with a line here-->
-            <br><details open id = "games"><summary>Games</summary>
+            <!-- possibly add a <br> with a line here
+            hr is a change-of-content divider -->
+            <br><br>
+
+            <details open id = "games"><summary class="mainDetail">Games</summary>
                 <details id = "crafting games"><summary>Crafting game help</summary>
                     <p>Crafting recipe & ingredient totals (also lets you group the recipes):
                         <br><a href = "https://docs.google.com/spreadsheets/d/114bZVDbutlVo7D3gNsgwNRUFcMJN3cdFJB1lX4ckyW8/edit?usp=sharing">Here</a>
                     </p>
                 </details>
-                <details id = "Azur lane"><summary>Azur Lane</summary>
+                <details id = "Azur lane"><summary>Azur Lane (old)</summary>
                     <p>(message me if you want me to work on this further?)
                         <br><a href="https://docs.google.com/spreadsheets/d/1WG7Iw_uMTZetN_SqZFti2bpD_m7vHeihug80ILm9XqM/edit?usp=sharing">Multiple random calculators</a>
                         <br><br><a href="https://docs.google.com/spreadsheets/d/1ljXBi0LCZfQIZUmUea7THOj65j00rJ72lBczfctW63g/edit?usp=sharing">Meowfficer sorter</a></td>             
@@ -41,7 +49,10 @@
             <p>Here's a list of all the public calculators available <a href="https://drive.google.com/drive/folders/1O1q3SgMYpPzqmPwyW64YZPFeFN9SvumM?usp=sharing">here</a>.</p>
         </div>
         
-        <h2>Javascript examples</h2>
+        
+        
+        <br><hr>        
+        <h2>Javascript examples (under construction)</h2>
         <div id="code examples">
             <div id="react">
                 <a href="reactCodes.html">React js content</a>
