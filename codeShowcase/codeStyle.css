@@ -7,16 +7,43 @@
 }*/
 
 /* adding content before each: https://stackoverflow.com/questions/20604556/adding-bullets-to-header-tag-in-orchard
-this example uses a unicode-code*/
+this example uses a unicode-code
+you can't set any other border properties without setting the "border-style" first
+*/
 details{
-    min-width: 500px;
-    max-width: 33%
+    /*border-style: none none solid none;
+    border-width: 5px;*/
+    min-width: 300px;
+    max-width: 70%
+}
+details > details{
+    border-style: none dashed solid none;
+    border-width: 1px;
+    max-width: 100%
 }
 /* effecs <summary> inside a details tag*/
-details > summary{
-    border-bottom-style: dashed;
-}
+/*details > summary*/
+.mainDetail{
+    border-bottom-style: solid;
+    border-width: 2px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: xx-large;
+    border-top-right-radius: 20px;
+} 
 
+details > details > summary{
+    border-style: none solid solid none; 
+    border-bottom-style: solid;
+    border-width: 2px;
+    padding-top: 7px;
+    background-color: lavender;
+    font-weight: bold;
+} 
+a{
+    border-style: none none double none;
+    border-width: 2px;
+}
 
 h2::before {
     content: '\272A';
